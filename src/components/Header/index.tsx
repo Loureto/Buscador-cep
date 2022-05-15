@@ -1,4 +1,6 @@
-import { Flex, Text } from '@chakra-ui/react';
+import { Flex, HStack } from '@chakra-ui/react';
+import LinkCustom from '../LinkCustom';
+import TextCustom from '../TextCustom';
 
 const Header = () => {
     return (
@@ -8,22 +10,21 @@ const Header = () => {
             bgColor="gray.700"
             align="center"
             justify="center"
-            padding="10px 20px"
+            padding="6px 20px"
         >
             <Flex
                 width="100%"
-                maxWidth="1080px"
+                maxWidth="1280px"
                 justify="space-between"
                 align="center"
             >
-                <Text color="gray.50" fontSize="2.25rem">
-                    Buscador Cep
-                </Text>
-                <Flex>
-                    <Text color="gray.50">Busca cep</Text>
-                    <Text color="gray.50">Busca cep</Text>
-                    <Text color="gray.50">Busca cep</Text>
-                </Flex>
+                <TextCustom fontSize="2.25rem">Buscador Cep</TextCustom>
+
+                <HStack gap="4">
+                    <LinkCustom>Buscar cep</LinkCustom>
+                    <LinkCustom>Buscar cep</LinkCustom>
+                    <LinkCustom>Buscar cep</LinkCustom>
+                </HStack>
             </Flex>
         </Flex>
     );
